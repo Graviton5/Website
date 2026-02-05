@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Happy Birthday Babygirl</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Quicksand:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+<!-- LOADING SCREEN -->
+<div id="loader">
+  <div class="cake">
+    <div class="candle"></div>
+    <div class="flame"></div>
+    <div class="cake-body"></div>
+  </div>
+  <p>Loading your present<span class="dots"></span></p>
+</div>
+
+<!-- BACKGROUND MUSIC -->
+<audio id="bg-music" src="assets/Happy Birthday To You Ji.mp3" loop></audio>
+
+<!-- HERO SECTION -->
+<section class="section hero">
+  <div class="hero-content">
+    <img src="assets/happy-birthday.jpg" alt="Happy Birthday" class="hero-image"/>
+    <h1>Happy Birthday to You Baby</h1>
+    <p class="hero-subtitle">Tap anywhere to start the party 🎶</p>
+    <p class="hero-hint">(Tap again if it's too loud)</p>
+  </div>
+</section>
+
+<div class="scroll-indicator">
+  <span>Scroll to see more</span>
+  <div class="chevron"></div>
+</div>
+
+<!-- PARALLAX SECTION 1 -->
+<section class="section parallax" data-section="1">
+  <div class="parallax-images">
+    <img src="assets/photo-left-1.jpeg" class="parallax-img" data-speed="0.6" data-position="1" alt="Memory"/>
+    <img src="assets/photo-left-2.jpeg" class="parallax-img" data-speed="0.5" data-position="2" alt="Memory"/>
+    <img src="assets/photo-left-3.jpeg" class="parallax-img" data-speed="0.1" data-position="3" alt="Memory"/>
+    <img src="assets/photo-left-4.jpeg" class="parallax-img" data-speed="0.4" data-position="4" alt="Memory"/>
+    <img src="assets/photo-left-9.jpeg" class="parallax-img" data-speed="0.3" data-position="5" alt="Memory"/>
+  </div>
+  <div class="text-content">
+    <h2>Love you, I am glad you exist</h2>
+    <p>Sometimes I stop and think about how lucky I am that the world created you. Just you being here makes things softer, brighter, and better for me.</p>
+  </div>
+</section>
+
+<!-- PARALLAX SECTION 2 -->
+<section class="section parallax" data-section="2">
+  <div class="parallax-images">
+    <img src="assets/photo-right-1.jpeg" class="parallax-img" data-speed="0.35" data-position="1" alt="Memory"/>
+    <img src="assets/photo-right-2.jpeg" class="parallax-img" data-speed="0.3" data-position="2" alt="Memory"/>
+    <img src="assets/photo-right-3.jpeg" class="parallax-img" data-speed="0.15" data-position="3" alt="Memory"/>
+    <img src="assets/photo-right-4.jpeg" class="parallax-img" data-speed="0.25" data-position="4" alt="Memory"/>
+  </div>
+  <div class="text-content">
+    <h2>You make my day better every time you call me</h2>
+    <p>No matter how bad or boring my day is, one call from you fixes everything. Your voice feels like comfort, laughter, and home all at once.</p>
+  </div>
+</section>
+
+<!-- PARALLAX SECTION 3 -->
+<section class="section parallax" data-section="3">
+  <div class="parallax-images">
+    <img src="assets/photo-left-5.jpeg" class="parallax-img" data-speed="0.25" data-position="1" alt="Memory"/>
+    <img src="assets/photo-left-6.jpeg" class="parallax-img" data-speed="0.5" data-position="2" alt="Memory"/>
+    <img src="assets/photo-left-7.jpeg" class="parallax-img" data-speed="0.2" data-position="3" alt="Memory"/>
+    <img src="assets/photo-left-8.jpeg" class="parallax-img" data-speed="0.4" data-position="4" alt="Memory"/>
+  </div>
+  <div class="text-content">
+    <h2>I wish you were here</h2>
+    <p>There are so many moments I want to share with you in person. Until then, just know that you're always with me, right here.</p>
+  </div>
+</section>
+
+<!-- PARALLAX SECTION 4 -->
+<section class="section parallax" data-section="4">
+  <div class="parallax-images">
+    <img src="assets/photo-right-5.jpeg" class="parallax-img" data-speed="0.34" data-position="1" alt="Memory"/>
+    <img src="assets/photo-right-6.jpeg" class="parallax-img" data-speed="0.48" data-position="2" alt="Memory"/>
+    <img src="assets/photo-right-7.jpeg" class="parallax-img" data-speed="0.58" data-position="3" alt="Memory"/>
+    <img src="assets/photo-right-8.jpeg" class="parallax-img" data-speed="0.24" data-position="4" alt="Memory"/>
+    <img src="assets/photo-right-9.jpeg" class="parallax-img" data-speed="0.15" data-position="5" alt="Memory"/>
+  </div>
+  <div class="text-content">
+    <h2>Happy Birthday to you ❤️</h2>
+    <p>I hope today reminds you how special you are and how deeply you're loved. You deserve all the happiness today — and every day after.</p>
+  </div>
+</section>
+
+<!-- QUIZ SECTION -->
+<section class="section quiz">
+  <div class="quiz-container">
+    <h2>Time for a Birthday Quiz</h2>
+    <p id="question" class="question-text"></p>
+    
+    <div class="buttons">
+      <button id="yesBtn" class="btn btn-yes">Yes</button>
+      <button id="noBtn" class="btn btn-no">No</button>
+    </div>
+    
+    <p id="progress" class="progress-text"></p>
+  </div>
+</section>
+
+<!-- RESULT SECTION -->
+<section class="section result">
+  <div class="result-container">
+    <h2 id="result-text"></h2>
+    <img src="assets/kisses.jpg" class="result-img" alt="Celebration"/>
+    <p id="result-subtext">(Call me hehehe)</p>
+  </div>
+</section>
+
+<script src="script.js"></script>
+</body>
+</html>
