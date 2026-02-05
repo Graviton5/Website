@@ -190,8 +190,15 @@ class QuizManager {
   init() {
     this.loadQuestion();
     
-    DOM.yesBtn.addEventListener('click', () => this.answerYes());
-    DOM.noBtn.addEventListener('click', () => this.answerNo());
+    DOM.yesBtn.addEventListener('click', (e) => {
+      e.stopPropagation();
+      this.answerYes();
+    });
+
+    DOM.noBtn.addEventListener('click', (e) => {
+      e.stopPropagation();
+      this.answerNo();
+    });
   }
 
   loadQuestion() {
@@ -230,10 +237,11 @@ class QuizManager {
 
     this.noClickCount = 0;
     
-
     if (this.index === 1) {
-      // console.log('Index is 1, setting up question 2 behavior');
+      DOM.yesBtn.disabled = true;
       this.setupQuestion2Behavior();
+    } else {
+      DOM.yesBtn.disabled = false;
     }
   }
 
